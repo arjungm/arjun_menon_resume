@@ -1,0 +1,12 @@
+*.log
+*.*~
+*.aux
+*.bbl
+*.blg
+*.bcf
+*.out
+*.run.xml
+*.tar.gz
+no_contact
+no_obj
+*.pdf

@@ -1,0 +1,194 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Friggeri Resume/CV
+% XeLaTeX Template
+% Version 1.0 (5/5/13)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Adrien Friggeri (adrien@friggeri.net)
+% https://github.com/afriggeri/CV
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+% Important notes:
+% This template needs to be compiled with XeLaTeX and the bibliography, if used,
+% needs to be compiled with biber rather than bibtex.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[]{friggeri-cv} % Add 'print' as an option into the square bracket to remove colors from this template for printing
+\hypersetup{
+  colorlinks = true
+}
+\addbibresource{bibliography.bib} % Specify the bibliography file to include publications
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\rfoot{References available on request}
+
+\begin{document}
+
+\header{Arjun}{Menon}{} % Your name and current job title/field
+
+%----------------------------------------------------------------------------------------
+%	SIDEBAR SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{aside} % In the aside, each new line forces a line break
+\section{contact}
+587 Bryson Ave.
+Palo Alto, CA 94306
+United States
++1 (412) 463 7895
+~
+\href{mailto:ajn.menon@gmail.com}{ajn.menon@gmail.com}
+\href{http://www.arjunm.org}{http://www.arjunm.org}
+\href{http://www.github.com/arjungm}{github.com/arjungm}
+\href{https://www.linkedin.com/in/menonarjun}{linkedin: menonarjun}
+\section{programming}
+C++, Python, 
+Java, MATLAB, LaTeX
+\section{practical skills}
+camera calibration,
+pointcloud processing,
+3D object modeling,
+object recognition,
+graph search,
+motion planning,
+trajectory control,
+trajectory optimization,
+kinematics \& dynamics modeling,
+robot localization,
+CAD (Inventor),
+Lathe, Mill, Waterjet
+\section{specific libraries}
+ROS, PCL, SBPL,
+MoveIt, OpenCV, 
+CGAL, KDL
+\section{languages}
+English (fluent)
+French (1 year)
+German (1 year)
+\section{honors}
+NSCS, Tau Beta Pi, 
+Gamma Beta Phi, 
+Honors Program at GT
+\section{interests}
+First Lego League,
+SciFi literature, 
+Olympic Lifting,
+Settlers of Catan,
+and Backgammon
+\end{aside}
+
+%additional skills? Linux, LaTeX
+\section{objective}
+Seeking entry level position in growing global technology organization that utilizes my academic qualifications and research experience. Technical interests are robotic planning and decision making, and software research and development.
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION SECTION
+%----------------------------------------------------------------------------------------
+
+\section{education}
+
+\begin{entrylist}
+%------------------------------------------------
+\eduentry
+{2012--2013}
+{Masters {\normalfont of Robotics}}
+{GPA 3.84/4.00}
+{Carnegie Mellon University, Pittsburgh}
+%------------------------------------------------
+\eduentry
+{2008--2012}
+{Bachelors {\normalfont of Mechanical Engineering, Minor in Computer Science}}
+{GPA 3.83/4.00}
+{Georgia Tech, Atlanta}
+%------------------------------------------------
+\end{entrylist}
+
+%----------------------------------------------------------------------------------------
+%	WORK EXPERIENCE SECTION
+%----------------------------------------------------------------------------------------
+\vspace{-2mm}
+\section{experience}
+
+\begin{entrylist}
+%------------------------------------------------
+\jobentry
+{Jun 2014 - Present}
+{SRI INTERNATIONAL}
+{Palo Alto, California}
+{Student Associate, Robotics}
+{\begin{itemize}
+\item Developed automated pipeline for batch recording robotic simulations.
+\item Designed and will conduct user study to measure quality of robot motion plans.
+\item Fixed benchmarking code for Open Source robotics software, MoveIt.
+\end{itemize}}
+%------------------------------------------------
+\jjobentry
+{May 2013 - Dec 2013}
+{SEARCH BASED PLANNING LABORATORY, CMU}
+{Pittsburgh, Pennsylvania}
+{Research Associate III}
+{Graduate Student Researcher}
+{Jan 2014 - Jun 2014}
+{\begin{itemize}\item Developed dynamics-aware planner for PR2, for handling moving goals.
+\item Created efficient search-heuristic for producing time-optimal robot motion.
+\item Demonstrated planner for grabbing objects off conveyor without jerking them.
+\item Incorporated online perception for realtime interactive demo of planning.
+\end{itemize}}
+%------------------------------------------------
+\jobentry
+{Aug 2012 - May 2013}
+{PERSONAL ROBOTICS LABORATORY, CMU}
+{Pittsburgh, Pennsylvania}
+{Graduate Student Researcher}
+{\begin{itemize}\item Built computational pipeline to link object detection with object discovery.
+\item Programmatically generated novel object models from 3D data and images.
+\item Demonstrated live robot performing perception and manipulation.
+\item Developed an automatic camera and kinect self-calibration sequence.
+\end{itemize}}
+%------------------------------------------------
+\jobentry
+{May 2011 - May 2012}
+{MOBILE ROBOT LABORATORY, GEORGIA TECH}
+{Atlanta, Georgia}
+{Undergraduate Researcher \& Lab Manager}
+{\begin{itemize}\item Designed herding AI for robotic agents in prey-predator scenarios.
+\item Created a finite state automata in multi-threaded simulation software, MissionLab.
+\item Configured mobile robot software and hardware for experimentation.
+\end{itemize}}
+%------------------------------------------------
+\end{entrylist}
+
+%----------------------------------------------------------------------------------------
+%	PUBLICATIONS SECTION
+%----------------------------------------------------------------------------------------
+\vspace{-2mm}
+\section{publications}
+
+\printbibsection{article}{article in peer-reviewed journal} % Print all articles from the bibliography
+
+\printbibsection{book}{books} % Print all books from the bibliography
+
+\begin{refsection} % This is a custom heading for those references marked as "inproceedings" but not containing "keyword=france"
+\nocite{*}
+\printbibliography[sorting=chronological, type=inproceedings, notkeyword={france}, heading=none]
+\end{refsection}
+
+\begin{refsection} % This is a custom heading for those references marked as "inproceedings" and containing "keyword=france"
+\nocite{*}
+\printbibliography[sorting=chronological, type=inproceedings, title={local peer-reviewed conferences/proceedings}, keyword={france}, heading=subbibliography]
+\end{refsection}
+
+\printbibsection{misc}{other publications} % Print all miscellaneous entries from the bibliography
+
+\printbibsection{report}{research reports} % Print all research reports from the bibliography
+%----------------------------------------------------------------------------------------
+\end{document}
