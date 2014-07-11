@@ -266,7 +266,7 @@
     \printlist{location}%
     \newunit%
   }
-  \par\vspace{0.3\baselineskip}
+  \par\vspace{0.3\baselineskip}\vspace{0.2cm}
 }
 
 \DeclareBibliographyDriver{misc}{%
